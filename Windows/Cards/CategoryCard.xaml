@@ -1,0 +1,26 @@
+﻿<Window x:Class="BookStore.Windows.Cards.CategoryCard"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BookStore.Windows.Cards"
+        mc:Ignorable="d"
+        Title="Добавление категории" MinHeight="490" MinWidth="800"
+        WindowStartupLocation="CenterScreen" Height="450" Width="800">
+    <Grid>
+        <Label Content="BookStore" Height="50" Width="130" FontSize="26" FontFamily="Bauhaus 93" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="70,10"/>
+
+        <Image Source="\Pictures\books-piled-.png" Height="50" Width="50" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10"/>
+        
+        <StackPanel Height="220">
+            <StackPanel Height="120" Width="400" Orientation="Horizontal">
+                <Label Content="Название:" Style="{DynamicResource LabelStyle}" Height="40" Width="110"/>
+                <TextBox Text="{Binding name}" Style="{DynamicResource TextBoxStyle}" Height="40" Width="290"/>
+            </StackPanel>
+            <StackPanel Width="400" Orientation="Horizontal">
+                <Button Content="Отмена" Style="{DynamicResource ButtonStyle}" Margin="5,0,35,0" Click="Undo_Btn"/>
+                <Button Content="Сохранить" Style="{DynamicResource ButtonStyle}" Margin="35,0,5,0" Click="Save_Btn"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
